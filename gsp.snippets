@@ -1,0 +1,109 @@
+snippet docready
+    $(document).ready(function() {
+        ${0:// Stuff to do as soon as the DOM is ready;}
+    });
+snippet applyL
+    <g:applyLayout name="${1}" />
+snippet checkB
+    <g:checkBox name="${1}" value="${2:true}" />
+snippet collect
+    <g:collect in="${1:${books}}" expr="it.${2:title}">
+        <p>${2}: ${it}</p>
+    </g:collect>
+snippet date
+    <g:datePicker name="${1:myDate}" value="${${2:new Date()}}" precision="${3:day}" />
+snippet each
+    <g:each in="${${1}}" var="${2:item}" ${3:status="i"}>
+        ${0}
+    </g:each>
+snippet else
+    <g:else>
+        ${1}
+    </g:else>
+snippet fieldV
+    <g:fieldValue bean="${1:${book}}" field="${2:title}" />
+snippet findA
+    <g:findAll in="${${1}}" expr="${2}">
+        ${0}
+    </g:findAll>
+snippet formatB
+    <g:formatBoolean boolean="${1:${myBoolean}}" />
+snippet formatD
+    <g:formatDate format="${1:MM-dd-yyyy}" date="${2:date}"/>
+snippet formatN
+    <g:formatNumber number="${${1:mynumber}}" type="${2:currency}" currencyCode="${3:USD}" />
+snippet form
+    <g:form name="${1:myForm}" action="${2:edit}" id="${3}">
+        ${0}
+    </g:form>
+snippet hasE
+    <g:hasErrors>
+        <g:eachError><p>${it.defaultMessage}</p></g:eachError>
+    </g:hasErrors>
+snippet if
+    <g:if test="${1}" >
+        ${0}
+    </g:if>
+snippet include
+    <g:include controller="${1:book}" action="${2:list}" />
+snippet js
+    <g:javascript src="${1:myscript.js}" />
+snippet join
+    <g:join in="${1:['Grails', 'Groovy', 'Gradle']}" delimiter="${2:_}"/>
+snippet layoutB
+    <g:layoutBody />]]>
+snippet layoutH
+    <g:layoutHead />
+snippet layoutT
+    <g:layoutTitle default="${1}" />
+        ${0}
+snippet link
+    <g:link controller="${1}" action="${2:show}" id="${3}">${2:show}</g:link>${0}
+snippet message
+    <g:message code="${1:my.message.code}" />
+snippet paginate
+    <g:paginate next="Forward" prev="Back"
+        maxsteps="0" controller="${1:book}"
+        action="${2:list}" total="${${3:Book}.count()}" />
+snippet pass
+    <g:passwordField name="${1:myPasswordField}" value="${${2:myPassword}}" />
+snippet radio
+    <g:radio name="${1:myGroup}" value="${2:1/2/3/4}" checked="${3:true/false}"/>
+snippet radioG
+    <g:radioGroup name="${1:myGroup}" values="[1,2,3]" labels="['Yes!','Of course!','Always!']" value="${2:1}" >
+        <p>${it.label} : ${it.radio}</p>
+    </g:radioGroup>
+snippet render
+    <g:render template="${1}" ${2:model/collection/bean}="${3}" />
+snippet renderE
+    <g:renderErrors ${1:bean/model}="${2:${book}}" as="list" />
+snippet grep
+    <g:grep in="$\{${1}}" filter="${2}">
+        <p>${3}: $\{${4}}</p>
+    </g:grep>
+snippet resource
+    <g:resource dir="${1:images}" file="${2}" ${3:absolute="true"}/>
+snippet select
+    <g:select name="${1}"
+        from="$\{${2}.${3:list()}}"
+        value="${4}"
+        optionKey="${5:id}"
+        ${6:noSelection="['':'']"} />
+snippet set
+    <g:set var="${1}" value="${${2:new Date()}}" ${3: scope="page"} />
+snippet sortable
+    <g:sortableColumn property="${1}" ${2:defaultOrder="desc" }title="${1}" />
+snippet textA
+    <g:textArea name="${1}" value="${2}" ${3:rows="5" } ${4:cols="40" }/>
+snippet textF
+    <g:textField name="${1}" value="${${2}}" />
+snippet unless
+    <g:unless test="${${1}}">
+        ${0}
+    </g:unless>
+snippet uploadF
+    <g:uploadForm name="${1}">
+        <input type="file" name="${2}" />
+    </g:uploadForm>
+snippet input
+    <input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}" id="${5}" />

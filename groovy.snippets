@@ -1,0 +1,70 @@
+snippet belongs
+    static belongsTo = [${1}:${2}]
+snippet hasMany
+    static hasMany = [${1}:${2}]
+snippet class
+    class ${1:ClassName} ${2:extends AnotherClass}
+snippet def
+    def ${1} = ${2}
+snippet else
+    else{
+        ${1}
+    }
+snippet errors
+    if(${1:variable}.hasErrors()) {
+        ${1}.errors.each {
+            println it
+        }
+    }
+snippet fab
+    findAllBy${1:Title}("${2:The Shining}"${3:, [max:10, sort:"title", order:"desc", offset:100]} )
+snippet flash
+    flash.message = "${1}"
+## Loops
+snippet for
+    for (${1:i} = ${2:0}; ${1:i} < ${3}; ${1:i}++){
+        // code...
+        ${0}
+    }
+snippet enfor
+    for (${1} : ${2}) ${3}
+snippet ifelse
+    if (${1}) { // ${2}
+        ${0}
+    } else { // ${3}
+
+    }
+snippet redirect
+    redirect(action:${1:show}, id:${2})
+snippet render
+    render(view:'${1}', model:['${2:item}':${2:item}])
+snippet switch
+    switch (${1}) {
+        case ${2}:
+            // code..
+            ${3:break}
+        case ${4}:
+            // code..
+            ${3}
+        default:
+            //
+    }
+snippet toString
+    String toString() {
+        ${0}
+    }
+snippet tc
+    try{
+        ${1}
+    }
+    catch(e){
+        ${2}
+    }
+snippet tcf
+    try {
+        ${1}
+    } catch (e) {
+        ${2}
+    } finally {
+        ${3}
+    }
